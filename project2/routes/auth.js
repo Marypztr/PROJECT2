@@ -8,7 +8,6 @@ router.get("/signup",(req,res,next) => res.render("auth/signup"))
 router.post("/signup",(req,res,next)=>{
     User.register({...req.body}, req.body.password)
         .then(()=>{
-            console.log("si funciona")
             res.redirect("/login")
 
         })
