@@ -1,13 +1,13 @@
-exports.isLogged = (req,res,next) => {
+exports.isLogged = (req, res, next) => {
     if (!req.isAuthenticated())
-    return res.redirect("/login")
+        return res.redirect("/login")
     next()
 }
 
-exports.isAdmin = (req,res,next) => {
-    if(req.user.role !== "ADMIN"){
+exports.isAdmin = (req, res, next) => {
+    if (req.user.role !== "ADMIN") {
         req.logOut()
-        req.redirect("/login")
+        res.redirect("/login")
     } else {
         next()
     }

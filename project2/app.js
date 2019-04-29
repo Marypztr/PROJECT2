@@ -10,7 +10,8 @@ const logger       = require('morgan');
 const path         = require('path');
 const passport = require("./handlers/passport")
 const session = require("express-session")
-const { isAdmin, isLogged } = require('./handlers/middlewares')
+const {isAdmin, isLogged} = require("./handlers/middlewares")
+
 
 mongoose
   .connect('mongodb://localhost/project2', {useNewUrlParser: true})
@@ -27,11 +28,11 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 const app = express();
 
 app.use(session ({
-  secret:process.env,
+  secret:process.env.SECRET,
   resave:true,
-  saveUninitialized: false,
+  saveUninitialized: true,
   cookie: {
-    maxAge: (1000 * 60 * 60 * 24)
+    maxAge:1000 * 60 * 60 * 24
   }
 })
 )
@@ -67,10 +68,11 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 const index = require('./routes/index');
-const auth = require('./routes/auth')
-const admin = require('./routes/admin')
+const auth = require("./routes/auth")
+const admin = require("./routes/Admin")
 app.use('/', index);
-app.use('/', auth);
-app.use('/', isLogged, isAdmin, admin)
+app.use("/", auth)
+app.use("/", isLogged, isAdmin, admin)
+
 
 module.exports = app;
