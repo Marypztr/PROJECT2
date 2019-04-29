@@ -14,5 +14,4 @@ const contributionSchema = new Schema(
 
 )
 
-
 module.exports = mongoose.model("contributions",contributionSchema)
