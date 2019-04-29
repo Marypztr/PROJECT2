@@ -72,7 +72,7 @@ const authRouter = require("./routes/auth")
 const admin = require("./routes/Admin")
 app.use('/', index);
 app.use("/auth", authRouter)
-app.use("/admin", isLogged, isAdmin, admin)
+app.use("/", isLogged, isAdmin, admin)
 
 
 module.exports = app;

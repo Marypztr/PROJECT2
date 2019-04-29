@@ -9,7 +9,7 @@ router.post("/signup",(req,res,next)=>{
     User.register({...req.body}, req.body.password)
         .then(()=>{
             console.log("si funciona")
-            res.redirect("/login")
+            res.redirect("auth/login")
 
         })
         .catch(err => next(err))
@@ -19,12 +19,12 @@ router.get("/login",(req,res,next) => res.render("auth/login"))
 router.post("/login",(req,res,next) =>{
     passport.authenticate("local", (err, user, info) =>{
         if(err) return next(err)
-        if(!user) return res.redirect("/login")
+        if(!user) return res.redirect("auth/profile")
         req.logIn(user,err => {
             if(err) return next (err)
             req.app.locals.loggedUser = user
             if ( req.user.role === "ADMIN") return res.redirect("/admin")
-            else if ( req.user.role === "USER") return res.redirect("/profile")
+            else if ( req.user.role === "USER") return res.redirect("/auth/profile")
         })
     })(req,res,next)
 })
