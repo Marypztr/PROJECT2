@@ -38,7 +38,7 @@ a {
   border-top-right-radius: 0; }
 
 #logreg-forms .social-login {
-  width: 390px;
+  width: 350px;
   margin: 0 auto;
   margin-bottom: 14px; }
 
@@ -51,7 +51,8 @@ a {
 #logreg-forms a {
   display: block;
   padding-top: 10px;
-  color: white; }
+  color: white;
+  text-align: center; }
 
 #logreg-form .lines {
   width: 200px;
@@ -63,7 +64,7 @@ a {
   border-color: #2dc5fa; }
 
 #logreg-forms button[type="submit"] {
-  margin-top: 10px; }
+  margin-top: 20px; }
 
 #logreg-forms .form-reset,
 #logreg-forms .form-signup {

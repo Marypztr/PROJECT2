@@ -1,3 +1,4 @@
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,6 +8,7 @@ a {
   color: #00b7ff;
 }
 
+//login and signout 
 #logreg-forms {
   width: 412px;
   margin: 10vh auto;
@@ -41,7 +43,7 @@ a {
 }
 
 #logreg-forms .social-login {
-  width: 390px;
+  width: 350px;
   margin: 0 auto;
   margin-bottom: 14px;
 }
@@ -56,6 +58,7 @@ a {
   display: block;
   padding-top: 10px;
   color: white;
+  text-align: center;
 }
 
 #logreg-form .lines {
@@ -70,7 +73,7 @@ a {
 }
 
 #logreg-forms button[type="submit"] {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #logreg-forms .form-reset,

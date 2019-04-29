@@ -10,7 +10,7 @@ const logger       = require('morgan');
 const path         = require('path');
 const passport = require("./handlers/passport")
 const session = require("express-session")
-
+const { isAdmin, isLogged } = require('./handlers/middlewares')
 
 mongoose
   .connect('mongodb://localhost/project2', {useNewUrlParser: true})
@@ -67,9 +67,10 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 const index = require('./routes/index');
-const auth = require("./routes/auth")
+const auth = require('./routes/auth')
+const admin = require('./routes/admin')
 app.use('/', index);
-app.use("/", auth)
-
+app.use('/', auth);
+app.use('/', isLogged, isAdmin, admin)
 
 module.exports = app;
