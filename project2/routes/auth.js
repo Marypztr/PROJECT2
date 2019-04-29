@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const passport = require("../handlers/passport")
+const passport = require("passport")
 const User = require("../models/User")
 const {isLogged} = require("../handlers/middlewares")
 
@@ -8,11 +8,12 @@ router.get("/signup",(req,res,next) => res.render("auth/signup"))
 router.post("/signup",(req,res,next)=>{
     User.register({...req.body}, req.body.password)
         .then(()=>{
+            console.log("si funciona")
             res.redirect("/login")
 
         })
         .catch(err => next(err))
-    })
+})
 router.get("/login",(req,res,next) => res.render("auth/login"))
 
 router.post("/login",(req,res,next) =>{
@@ -23,7 +24,7 @@ router.post("/login",(req,res,next) =>{
             if(err) return next (err)
             req.app.locals.loggedUser = user
             if ( req.user.role === "ADMIN") return res.redirect("/admin")
-            else if ( req.user.role === "USER") return res.redirect("/profile")
+            else if ( req.user.role === "USER") return res.redirect("auth/profile")
         })
     })(req,res,next)
 })
