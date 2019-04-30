@@ -1,11 +1,43 @@
-<h2>Welcome {{loggedUser.name}}</h2>
+<side-bar class="sideNav">
+  <section class="logo-container">
+    <img class="logo"
+      src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/4017/s300/logo-ironhack-blue.png"
+      alt="" srcset="">
+  </section>
+  <section class="favoritos">
+    <div class="fav fav-title">
+      <p>Favoritos</p>
+    </div>
+    <div class="fav">
+      <i class="fab fa-js-square"></i> Javascript
+    </div>
+    <div class="fav">
+      <i class="fab fa-html5"></i> HTML
+    </div>
+    <div class="fav">
+      <i class="fab fa-css3-alt"></i> CSS
+    </div>
+  </section>
+  <section>
+    <div class="add-fav"><i class="fas fa-plus"></i></div>
+  </section>
+</side-bar>
 
+<nav class="nav-bar">
+  <i class="fas fa-arrow-circle-left return"></i>
+  <a class="createPost" href="/">create new post</a>
+</nav>
 
-<div id="create-post">
-<form action="/auth/profile/create" method="POST">
-<input type="text" name="title">
-<input type="text" name="text">
-<input type="submit" value="create-post">
-</form>
-
-</div>
+<section class="profile-body">
+  <div class="pic">
+    <img src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg" alt="" srcset="">
+  </div>
+  <h2>WELCOME {{loggedUser.name}}</h2>
+  <div>
+    <img src="{{photoURL}}">
+  </div>
+  <div class="sources">
+    <h2>MY CONTRIBUTIONS</h2>
+    <h2>PENDING</h2>
+  </div>
+</section>

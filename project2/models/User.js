@@ -22,3 +22,4 @@ userSchema.plugin(PLM,{usernameField:"email"})
 const User = mongoose.model("User",userSchema)
 
 module.exports= User
+
