@@ -1,3 +1,11 @@
 <h2>Welcome {{loggedUser.name}}</h2>
 
 
+<div id="create-post">
+<form action="/auth/profile/create" method="POST">
+<input type="text" name="title">
+<input type="text" name="text">
+<input type="submit" value="create-post">
+</form>
+
+</div>

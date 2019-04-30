@@ -11,7 +11,6 @@ const userSchema = new mongoose.Schema({
         enum:["ADMIN","USER"],
         default: "USER"
     }
-
 },{
     timestamps:true,
     versionkey:false
