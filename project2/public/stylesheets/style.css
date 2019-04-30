@@ -225,6 +225,20 @@ a p {
 .sources h2 {
   margin: 100px; }
 
+.buttonfav {
+  border: none;
+  box-shadow: none;
+  background-color: #f3f3f3;
+  outline: none; }
+
+.buttonfav:focus {
+  box-shadow: none;
+  outline: none; }
+
+.buttonfav:hover {
+  transform: translateY(4px);
+  scaleY: 35px; }
+
 /* Mobile */
 @media screen and (max-width: 500px) {
   .sideNav {

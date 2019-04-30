@@ -1,9 +1,10 @@
-exports.isLogged = (req, res, next) => { console.log(req.user)
+exports.isLogged = (req, res, next) => { 
     if (!req.isAuthenticated()){
         return res.redirect("/auth/login")
     }
     next()
 }
+
 
 exports.isAdmin = (req, res, next) => {
     if (req.user.role !== "ADMIN") {
@@ -13,3 +14,5 @@ exports.isAdmin = (req, res, next) => {
         next()
     }
 }
+
+
