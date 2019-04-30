@@ -7,7 +7,7 @@ const contributionSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref:"User"
     }, 
-      newComand: String,
+      comand: String,
       description: String
       
     }

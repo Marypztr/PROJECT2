@@ -1,38 +1,13 @@
-// const express = require('express')
-// const router = express.Router()
-// const Post = require('../models/Post')
-// const User = require('../models/User')
+const express = require('express');
+const router = express.Router()
+const Contributions = require('../models/Contributions')
 
 
-// router.get("/admin", (req, res, next)=> res.render("auth/profile"))
+router.get("/userData", (req,res,next) => {
+ 
+  Contributions.find()
+  .then(data =>{ console.log({data})
+  res.render("admin/contributions", {data})})
+})
 
-// router.get('/auth/profile', (req,res,next)=>{
-//   Post.find()
-//   .then(post =>{
-//     res.render('/auth/profile', {post})
-//   })
-//   .cath(err => next(err))
-// })
-
-// router.post('/auth/profile/create', (req,res,next)=>{
-//   Post.create({...req.body})
-//   .then(()=> res.render('auth/profile/post'))
-//   .cath(err => next(err))
-// })
-
-// router.get('/auth/profile/delete/:id',(req,res,next)=>{
-//   const {id} = req.param
-//   Post.findByIdDelete(id)
-//   .then(()=> res.redirect('/profile/post'))
-//   .cath(err => next(err))
-// })
-
-// router.get('/admin/user',(req,res,next)=>{
-//   User.find()
-//   .then(users =>{
-//     res.render('/admin/user',({users}))
-//   })
-//   .cath(err => next(err))
-// })
-
-// module.exports = router
+module.exports= router
