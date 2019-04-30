@@ -1,14 +1,17 @@
 <div id="logreg-forms">
+  <div class="bolita"><i class="fas fa-user"></i></div>
   <form class="form-signin" action="login" method="POST">
     <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Iniciar Sesión</h1>
-    <div class="social-login">
-      <a class="btn btn-block btn-social btn-github"> <i class="fab fa-github"></i> Inicia con Github </a>
-    </div>
     <br> </br>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Correo" name ="email"required="" autofocus="">
-    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" name ="password"  required="">
+    <input type="email" id="inputEmail" class="form-control auth-inputs" placeholder="Correo" name ="email" required="" autofocus="">
+    <input type="password" id="inputPassword" class="form-control auth-inputs" placeholder="Contraseña" name ="password"  required="">
     <br> </br>
     <button class="btn btn-success1 btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Iniciar</button>
     <hr>
+    <div class="social-login">
+      <a class="btn btn-block btn-social btn-github"> <i class="fab fa-github"></i> Inicia con Github </a>
+    </div>
   </form>
+  <h6>¿No tienes cuenta? <a href="/auth/signup"><p>Registrate Aquí</p></a></h6>
 </div>
+
