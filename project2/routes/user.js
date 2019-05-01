@@ -15,7 +15,12 @@ res.render("user/newPost")
 })
 
 router.post("/createPost",(req,res,next) =>{
-  User.create
+  Contributions.create({...req.body})
+  .then(newPost => {
+    res.redirect("/userData")
+  })
+  .catch(err =>  
+    res.send(err))
 })
 
 module.exports= router

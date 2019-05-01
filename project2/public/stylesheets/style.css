@@ -239,6 +239,27 @@ a p {
   transform: translateY(4px);
   scaleY: 35px; }
 
+.buttonReturnPost {
+  width: 20px;
+  display: flex;
+  margin-right: -5%;
+  margin-bottom: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 35px;
+  color: #383838; }
+
+.blockCreate {
+  justify-content: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin-top: -50px;
+  margin-bottom: 30px; }
+
 /* Mobile */
 @media screen and (max-width: 500px) {
   .sideNav {
