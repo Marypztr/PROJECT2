@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Contributions = require('../../views/admin/contributions.hbs')
+const Contributions = require('../../models/Contributions')
 const { ObjectId } = mongoose.Types;
 const router = express.Router();
+
+
 // Create
 router.post('/', (req, res, next)=> {
   const {user} = req.body
