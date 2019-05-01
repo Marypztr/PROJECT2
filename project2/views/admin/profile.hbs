@@ -33,39 +33,3 @@
   <i class="fas fa-arrow-circle-left return"></i>
   <a class="createPost" href="/createPost">create new post</a>
 </nav>
-
-<section class="profile-body table-body">
-  <div>
-    <table class="table command-table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Command</th>
-      <th scope="col">Description</th>
-      <th scope="col">Author</th>
-      <th scope="col">Validation</th>
-    </tr>
-  </thead>
-  <tbody>
-   {{#each data as |datito|}}
-    <tr>
-      <th scope="row"> {{datito.command}}</th>
-      <td>{{datito.description}}</td>
-      <td>{{datito.owner.name}}</td>
-      <td class="validation">{{#if datito.validation}}
-
-        <div ><i class="fas fa-check-circle check"></i></div>
-        {{else}}
-        <div><i class="fas fa-times-circle wrong"></i></div>
-        {{/if}}
-      </td>
-    </tr>
-      {{/each}}
-  </tbody>
-</table>
-
-
-  </div>
-</section>
-
-
-<form action="" method="post"></form>

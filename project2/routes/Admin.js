@@ -4,7 +4,7 @@ const Contributions = require('../models/Contributions')
 const User = require('../models/User')
 
 
-router.get("/admin", (req, res, next)=>res.render("admin/profile"))
+router.get("/admin/profile", (req, res, next)=>res.render("admin/profile"))
 
 router.get('/admin/contributions', (req, res, next) => {
   Contributions.find()
