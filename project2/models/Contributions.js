@@ -7,8 +7,9 @@ const contributionSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref:"User"
     }, 
-      comand: String,
-      description: String
+      command: String,
+      description: String,
+      validation: Boolean
       
     }
 
