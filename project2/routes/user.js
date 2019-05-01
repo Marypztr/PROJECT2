@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router()
 const Contributions = require('../models/Contributions')
+const User = require("../models/User")
 
 
 router.get("/userData", (req, res, next) => {
@@ -26,7 +27,11 @@ router.post("/createPost", (req, res, next) => {
   }
   Contributions.create({ ...req.body, validation })
     .then(newPost => {
-      res.redirect("/userData")
+      User.findByIdAndUpdate(req.user._id,{$push:{contributions:newPost}},{new:true})
+      .then(()=>{
+        res.redirect("/userData")
+      })
+     .catch(err=> res.send(err))
     })
     .catch(err =>
       res.send(err))

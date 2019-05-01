@@ -45,6 +45,12 @@
   </div>
   <div class="sources">
     <h2>MY CONTRIBUTIONS</h2>
+    
+    {{#each contributions as |contribution|}}
+    {{contribution.command}}
+    {{contribution.description}}
+    {{/each}}
+
     <h2>PENDING</h2>
   </div>
   

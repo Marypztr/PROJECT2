@@ -19,4 +19,4 @@ const contributionSchema = new Schema(
 
 )
 
-module.exports = mongoose.model("contributions", contributionSchema)
+module.exports = mongoose.model("Contributions", contributionSchema)
