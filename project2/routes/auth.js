@@ -12,8 +12,6 @@ router.post("/signup",(req,res,next)=>{
         })
         .catch(err => next(err))
 })
-
-
 router.get("/login",(req,res,next) => res.render("auth/login"))
 
 router.post("/login",(req,res,next) =>{
