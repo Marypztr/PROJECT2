@@ -1,5 +1,69 @@
-{{#each data as |datito|}}
-  {{datito.comand}}
-  {{datito.description}}
-{{/each}}
+<side-bar class="sideNav">
+  <section class="logo-container">
+    <img class="logo"
+      src="https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/4017/s300/logo-ironhack-blue.png"
+      alt="" srcset="">
+  </section>
+  <section class="favoritos">
+    <div class="fav fav-title">
+      <p>Favoritos</p>
+    </div>
+
+    <div class="fav" >
+      <a href="/userData">
+     <button class="buttonfav">
+       <i class="fab fa-js-square"></i> Javascript
+    </button> 
+    </a>
+    </div>
+    
+    <div class="fav">
+      <i class="fab fa-html5"></i> HTML
+    </div>
+    <div class="fav">
+      <i class="fab fa-css3-alt"></i> CSS
+    </div>
+  </section>
+  <section>
+    <div class="add-fav"><i class="fas fa-plus"></i></div>
+  </section>
+</side-bar>
+
+<nav class="nav-bar">
+  <i class="fas fa-arrow-circle-left return"></i>
+  <a class="createPost" href="/createPost">create new post</a>
+</nav>
+
+<section class="profile-body table-body">
+  <div>
+    <table class="table command-table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Command</th>
+      <th scope="col">Description</th>
+      <th scope="col">Author</th>
+      <th scope="col">Validation</th>
+    </tr>
+  </thead>
+  <tbody>
+   {{#each data as |datito|}}
+    <tr>
+      <th scope="row"> {{datito.command}}</th>
+      <td>{{datito.description}}</td>
+      <td>Admin</td>
+      <td class="validation">{{#if datito.validation}}
+        <div ><i class="fas fa-check-circle check"></i></div>
+        {{else}}
+        <div><i class="fas fa-times-circle wrong"></i></div>
+        {{/if}}
+      </td>
+    </tr>
+      {{/each}}
+  </tbody>
+</table>
+
+
+  </div>
+</section>
+
 

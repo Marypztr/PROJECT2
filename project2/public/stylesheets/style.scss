@@ -294,6 +294,61 @@ a p{
   margin-bottom: 30px;
 }
 
+.table-body{
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 80px;
+}
+.validation{
+  text-align: center;
+}
+
+.check{
+  font-size: 20px;
+  color:green;
+}
+.wrong{
+  font-size: 20px;
+  color:red;
+}
+
+.profile-body h1{
+  margin-top: -60px;
+  margin-bottom: 150px;
+}
+
+.new-post-border {
+  background: #29a3a3;
+  width: 70%;
+  height: 80%;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-post-border input {
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+.new-post-border textarea {
+  border-radius: 20px;
+  margin-bottom: 50px;
+
+}
+.new-post-border button {
+  border-radius: 20px;
+  width: 300px;
+  height: 40px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.down-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 500px) {

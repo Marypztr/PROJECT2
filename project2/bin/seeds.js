@@ -6,108 +6,141 @@ mongoose.connect(`mongodb://localhost/project2`)
 
 let data = [
   {
-    comand : "//",
-    descrption : "Using for comment line code",
+    command : "//",
+    description  : "Using for comment line code",
+    validation: true,
   }, {
-    comand : "/* .... */",
-    descrption: "Using to comment a code block",
+    command : "/* .... */",
+    description : "Using to comment a code block",
+    validation: true
   }, {
-    comand: "var",
-    descrption : "declares a variable, optionally initializing a value to it",
+    command: "var",
+    description  : "declares a variable, optionally initializing a value to it",
+    validation: true
   }, {
 
-    comand : "let",
+    command : "let",
     description : "Declares a block-scoped, local variable, optionally initializing it to a value",
+    validation: true
   }, {
 
-    comand :"const",
+    command :"const",
     description :"Declares a block-scoped, read-only named constant",
+    validation: true
   }, {
-    comand: "boolean type",
+    command: "boolean type",
     description: "true o false",
+    validation: true
   }, {
-    comand :  "null type",
+    command :  "null type",
     description: "keyword denoting a null value",
+    validation: true
   }, {
-    comand: "undefined",
+    command: "undefined",
     description:"a top-level propertu whose value is not defined",
+    validation: true
   }, {
-    comand: "number",
+    command: "number",
     description: "An interger or floating point number",
+    validation: true
   }, {
-    comand:"string",
+    command:"string",
     description:"a sequence of characters tha represents a text value",
+    validation: true
   }, {
 
-    comand: "Array []",
+    command: "Array []",
     description :"is a list of zero or more expressions",
+    validation: true
   }, {
-    comand: "block statment{}",
+    command: "block statment{}",
     description:"Is used to group statments",
+    validation: true
   }, {
-    comand: "if-else",
+    command: "if-else",
     description:"execute a statment if a logical condition is tru, an es clause to execute a statment if the condition is false",
+    validation: false
   }, {
-    comand: "promise",
+    command: "promise",
     description: "allow to control the flow of deferred and asyncrhronous operations",
+    validation: true
   }, {
-    comand: "for",
+    command: "for",
     description: "loop that repeats until a specified condition evaluates to false",
+    validation: true
   }, {
 
-    comand: "label",
+    command: "label",
     description: "provides a statment whit an identifier that lets you refer to it elsewhere in your program",
+    validation: true
   }, {
-    comand: "break",
+    command: "break",
     description:"statement to terminate a loop",
+    validation: true
   }, {
-    comand: "function declaration",
+    command: "function declaration",
     description:"variables defined inside a function cannot be accessed from anywhere outside the function",
+    validation: true
   }, {
-    comand :"arrow function",
+    command :"arrow function",
     description:"has a shorter syntax compared to function expressions and does not have its own this",
+    validation: true
   }, {
-    comand : "==",
+    command : "==",
     description:"returns trje if the operands are equal",
+    validation: true
   },{
-    comand :"!=",
+    command :"!=",
     description:"returns true if the operands are not equal",
+    validation: true
   }, {
-    comand : "===",
+    command : "===",
     description:"returns true if the operands are equal and of the same type",
+    validation: true
   }, {
-    comand : "!==",
+    command : "!==",
     description:"returns true if the operands are of the same type but not equal, or a of different type",
+    validation: true
   }, {
-    comand: ">",
+    command: ">",
     description:"returns true if the left operand is greater than the right operand",
+    validation: false
   }, {
-    comand: ">:",
+    command: ">:",
     description:"returns true if the left operand is greater than or equal to the right operand",
+    validation: true
   }, {
-    comand:"<",
+    command:"<",
     description :"returns true if the left operand is less than the right operand",
+    validation: true
   }, {
-    comand: "<:",
+    command: "<:",
     description:"returns true if the left operand is less than or eual to the right operand",
+    validation: true
   }, {
-    comand:"%",
+    command:"%",
     description:"Binary operator. Returns the intefer remainder of dividing the two operands",
+    validation: true
   }, {
-    comand :  "++",
+    command :  "++",
     description:"Unary operator. adds one to its operand",
+    validation: true
   }, {
-    comand:"--",
+    command:"--",
     description:" Substract one from its operand.The return value is analogous to that for the increment operator",
+    validation: true
   }, {
-    comand: "-",
+    command: "-",
     description:"returns the negation of its operand",
+    validation: true
   }, {
-    comand :"+",
+    command :"+",
     description:"Attempts to convert the operand to a number, if it is not already",
+    validation: false
   }, {
-    comand : "**",
-    description:"Calculates the base to the exponent power, that is, base exponent"
+    command : "**",
+    description:"Calculates the base to the exponent power, that is, base exponent",
+    validation: true
   } 
 ]
 
