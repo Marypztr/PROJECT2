@@ -14,7 +14,7 @@ const {isAdmin, isLogged} = require("./handlers/middlewares")
 
 
 mongoose
-  .connect('mongodb://localhost/project2', {useNewUrlParser: true})
+  .connect(process.env.DB, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -71,9 +71,9 @@ const index = require('./routes/index');
 const authRouter = require("./routes/auth")
 const admin = require("./routes/Admin")
 const user = require("./routes/user")
+app.use("/auth", authRouter)
 app.use('/', index);
 app.use('/', user)
-app.use("/auth", authRouter)
 app.use("/", admin)
 
 
