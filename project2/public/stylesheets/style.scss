@@ -19,7 +19,7 @@ a {
 #logreg-forms {
   width: 500px;
   height: 500px;
-  background-color: #f3f3f3;
+  background-color: RGBA(243,243,243,0.44);
   border-radius: 40px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   display:flex;
@@ -27,6 +27,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 #logreg-forms form {
   width: 100%;
   max-width: 410px;
@@ -350,6 +351,7 @@ a p{
   display: flex;
   justify-content: space-between;
 }
+
 
 /* Mobile */
 
