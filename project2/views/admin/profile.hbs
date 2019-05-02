@@ -1,27 +1,38 @@
-{{!-- {{!-- <side-bar class="sideNav">
-  <section class="logo-container">
-    <img class="logo"
-      src="../images/logocolor.png"
-      alt="" srcset="">
+<side-bar class="sideNav">
+  <div class="pic">
+    <img src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg" alt="" srcset="">
+  </div>
+  <h2> Administrador {{loggedUser.name}}</h2>
+  <div>
+    <img src="{{photoURL}}">
+  </div>
+
   </section>
   <section class="favoritos">
-    <div class="fav fav-title">
-      <p>Favoritos</p>
+    <div>
+      <button>
+      <i class="fas fa-star">Favoritos</i>
+      </button>
     </div>
 
-    <div class="fav" >
+    <div>
       <a href="/userData">
-     <button class="buttonfav">
-       <i class="fab fa-js-square"></i> Javascript
-    </button> 
-    </a>
+        <button class="btn btn-outline-secondary">
+          <i class="fab fa-js-square"></i> Javascript
+        </button>
+      </a>
     </div>
-    
-    <div class="fav">
-      <i class="fab fa-html5"></i> HTML
+
+    <div>
+      <button class="btn btn-outline-secondary"> 
+        <i class="fab fa-html5"></i>  HTML
+
+      </button>
     </div>
-    <div class="fav">
+    <div>
+      <button class="btn btn-outline-secondary" >
       <i class="fab fa-css3-alt"></i> CSS
+      </button>
     </div>
   </section>
   <section>
@@ -30,61 +41,42 @@
 </side-bar>
 
 <nav class="nav-bar">
-  <i class="fas fa-arrow-circle-left return"></i>
-  <a class="createPost" href="/createPost">create new post</a>
+  <a href="auth/logout"><i class="fas fa-power-off"></i></a>
 </nav>
 
- --}}
+<section class="profile-body">
 
-<div>
-<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+  <div class="">
+      <a href="/editProfile/{{loggedUser._id}}">
+      <button type="button" class="btn btn-outline-primary buttonProfileBlue">Edit Profile</button>
+      </a>
 
-    <a class="navbar-brand mr-1" href="/">Wat Da Hack</a>
+      <a href="/createPost">
+      <button type="button" class="btn btn-outline-success buttonProfileGreen">Create a new post</button>
+      </a> 
 
-    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-      <i class="fas fa-bars"></i>
-    </button>
+  </div>
+  <div>
+    <h2>MY CONTRIBUTIONS</h2>
 
-    <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-      <div class="input-group">
-        
-      </div>
-    </form>
-
-    <!-- Navbar -->
-    <ul class="navbar-nav ml-auto ml-md-0">
-      <li class="nav-item">
-        <a class="nav-link" href="../auth/login">
-          <i class="fas fa-user-circle fa-fw"></i>
-        </a>
-      </li>
-    </ul>
-
-  </nav>
+        <table class="table profile-table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Command</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+{{#each contributions as |contribution|}}
+    <tr>
+      <th scope="row"> {{contribution.command}}</th>
+      <td> {{contribution.description}}</td>
+      </td>
+    </tr>
+      {{/each}}
+  </tbody>
+</table>
+  </div>
+</section>
+<div class="buttonjs">
 </div>
-
-
-  <div id="wrapper">
-    <ul class="sidebar navbar-nav">
-      <section class="logo-container2">
- <img src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg" alt="" srcset="">
-    <h4> {{loggedUser.name}}</h4>
-  </section>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Lenguajes</span>
-        </a>
-        <li class="links-sidebar">
-        <li class="links-sidebar"><a href="#"><i class="fab fa-js-square"></i> Javascript</a></li>
-        <li class="links-sidebar"><a href="#"><i class="fab fa-html5"></i>html</a></li>
-        <li class="links-sidebar"><a href="#"><i class="fab fa-css3-alt"></i> CSSCss</a></li>
-      </li>
-    </ul>
-</div>
-
-<div class="white-board">
-
-
-</div> --}}

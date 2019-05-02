@@ -1,27 +1,38 @@
 <side-bar class="sideNav">
-  <section class="logo-container">
-    <img class="logo"
-      src="../images/logocolor.png"
-      alt="" srcset="">
+  <div class="pic">
+    <img src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg" alt="" srcset="">
+  </div>
+  <h2> Administrador {{loggedUser.name}}</h2>
+  <div>
+    <img src="{{photoURL}}">
+  </div>
+
   </section>
   <section class="favoritos">
-    <div class="fav fav-title">
-      <p>Favoritos</p>
+    <div>
+      <button>
+      <i class="fas fa-star">Favoritos</i>
+      </button>
     </div>
 
-    <div class="fav" >
+    <div>
       <a href="/userData">
-     <button class="buttonfav">
-       <i class="fab fa-js-square"></i> Javascript
-    </button> 
-    </a>
+        <button class="btn btn-outline-secondary">
+          <i class="fab fa-js-square"></i> Javascript
+        </button>
+      </a>
     </div>
-    
-    <div class="fav">
-      <i class="fab fa-html5"></i> HTML
+
+    <div>
+      <button class="btn btn-outline-secondary"> 
+        <i class="fab fa-html5"></i>  HTML
+
+      </button>
     </div>
-    <div class="fav">
+    <div>
+      <button class="btn btn-outline-secondary" >
       <i class="fab fa-css3-alt"></i> CSS
+      </button>
     </div>
   </section>
   <section>
@@ -30,10 +41,8 @@
 </side-bar>
 
 <nav class="nav-bar">
-  <i class="fas fa-arrow-circle-left return"></i>
-  <a class="createPost" href="/createPost">create new post</a>
+  <a href="auth/logout"><i class="fas fa-power-off"></i></a>
 </nav>
-
 
 
 <section class="profile-body">
@@ -42,15 +51,15 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					
-					<form action="/createPost" method="POST">
+					<form action="/createPost" class="create-post" method="POST">
 					<h2>Create a new Post</h2>
-						<div class="form-group">
+						<div class="form-group command">
 							<label for="title">Comand <span class="require">*</span></label>
 							<input type="text" class="form-control" name="command" />
 						</div>
 						<div class="form-group">
 							<label for="description">Description *</label>
-							<textarea rows="5" class="form-control" name="description" ></textarea>
+							<textarea rows="5" class="form-control" name="description"  ></textarea>
 						</div>
 						<div class="form-group">
 							<p><span class="require">*</span> - required fields</p>

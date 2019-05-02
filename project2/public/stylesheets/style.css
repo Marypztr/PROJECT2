@@ -136,7 +136,7 @@ a p {
   height: 100%;
   width: 80%;
   position: fixed;
-  background-color: #ccffff;
+  background-image: linear-gradient(to bottom right, #80dfff, #ccffff, #70db70);
   z-index: 1;
   right: 0;
   bottom: 0;
@@ -280,15 +280,21 @@ a p {
   margin-top: -60px;
   margin-bottom: 150px; }
 
+.create-post {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px; }
+
 .new-post-border {
   background: #29a3a3;
-  width: 70%;
-  height: 80%;
+  width: 40%;
+  height: 90%;
   border-radius: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 10%; }
 
 .new-post-border input {
   border-radius: 20px;
@@ -296,11 +302,13 @@ a p {
 
 .new-post-border textarea {
   border-radius: 20px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  width: 378px;
+  height: 178px; }
 
 .new-post-border button {
   border-radius: 20px;
-  width: 300px;
+  width: 170px;
   height: 40px;
   margin-right: 5px;
   margin-left: 5px; }
@@ -308,6 +316,18 @@ a p {
 .down-buttons {
   display: flex;
   justify-content: space-between; }
+
+.buttonProfileBlue {
+  width: 200px !important;
+  height: 60px !important;
+  font-size: 20px;
+  border-color: #1e90ff; }
+
+.buttonProfileGreen {
+  width: 200px !important;
+  height: 60px !important;
+  font-size: 20px;
+  border-color: #228b22; }
 
 /* Mobile */
 @media screen and (max-width: 500px) {
@@ -386,9 +406,6 @@ img.logotipo {
   border-color: var(--acent-bg-color) !important;
   border-radius: 100px !important; }
 
-.btn-outline-primary {
-  background: #29A3A3; }
-
 .btn-primary-outlet:hover {
   color: #29A3A3 !important;
   background: var(--acent-bg-color) !important; }
@@ -397,7 +414,7 @@ input {
   padding: 10px 10px 10px 5px !important;
   display: block !important;
   border: none !important;
-  border-radius: 0px !important;
+  border-radius: 8px !important;
   border-bottom: 1px solid #757575 !important; }
 
 input:focus {
