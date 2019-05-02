@@ -351,6 +351,20 @@ a p{
   justify-content: space-between;
 }
 
+.buttonProfileBlue{
+  width: 200px !important;
+  height: 60px !important;
+  font-size: 20px;
+  border-color: #1e90ff;
+
+}
+.buttonProfileGreen{
+  width: 200px !important;
+  height: 60px !important;
+  font-size: 20px;
+  border-color: #228b22;
+}
+
 /* Mobile */
 
 @media screen and (max-width: 500px) {
@@ -447,9 +461,7 @@ img.logotipo {
   border-radius: 100px !important;
 }
 
-.btn-outline-primary{
-  background: #29A3A3;
-}
+
 .btn-primary-outlet:hover {
   color:  #29A3A3 !important;
   background: var(--acent-bg-color) !important;
