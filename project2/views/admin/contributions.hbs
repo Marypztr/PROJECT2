@@ -44,21 +44,23 @@
       <th scope="col">Description</th>
       <th scope="col">Author</th>
       <th scope="col">Validation</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
    {{#each data as |datito|}}
     <tr>
       <th scope="row"> {{datito.command}}</th>
-      <td>{{datito.description}}</td>
+      <td>{{datito.description}} </td> 
       <td>{{datito.owner.name}}</td>
       <td class="validation">{{#if datito.validation}}
-
+      
         <div ><i class="fas fa-check-circle check"></i></div>
         {{else}}
         <div><i class="fas fa-times-circle wrong"></i></div>
         {{/if}}
       </td>
+      <td> <button>Delete</button></td>
     </tr>
       {{/each}}
   </tbody>
