@@ -136,7 +136,7 @@ a p {
   height: 100%;
   width: 80%;
   position: fixed;
-  background-color: #ccffff;
+  background-image: linear-gradient(to bottom right, #80dfff, #ccffff, #70db70);
   z-index: 1;
   right: 0;
   bottom: 0;
@@ -309,6 +309,18 @@ a p {
   display: flex;
   justify-content: space-between; }
 
+.buttonProfileBlue {
+  width: 200px !important;
+  height: 60px !important;
+  font-size: 20px;
+  border-color: #1e90ff; }
+
+.buttonProfileGreen {
+  width: 200px !important;
+  height: 60px !important;
+  font-size: 20px;
+  border-color: #228b22; }
+
 /* Mobile */
 @media screen and (max-width: 500px) {
   .sideNav {
@@ -385,9 +397,6 @@ img.logotipo {
   color: white;
   border-color: var(--acent-bg-color) !important;
   border-radius: 100px !important; }
-
-.btn-outline-primary {
-  background: #29A3A3; }
 
 .btn-primary-outlet:hover {
   color: #29A3A3 !important;
