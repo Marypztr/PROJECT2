@@ -1,47 +1,30 @@
 <side-bar class="sideNav">
-  <div class="pic">
-    <img src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg" alt="" srcset="">
+	  <div>
+    <img src="/images/logo2.png">
   </div>
-  <h2> Administrador {{loggedUser.name}}</h2>
-  <div>
-    <img src="{{photoURL}}">
-  </div>
-
+  <h2>WELCOME <br> {{loggedUser.name}}</h2>
   </section>
-  <section class="favoritos">
-    <div>
-      <button>
+  <section id="botoncitos">
+      <button class="buttonFavoritos">
       <i class="fas fa-star">Favoritos</i>
       </button>
-    </div>
-
-    <div>
       <a href="/userData">
-        <button class="btn btn-outline-secondary">
+        <button class="btn btn-outline-secondary ">
           <i class="fab fa-js-square"></i> Javascript
         </button>
       </a>
-    </div>
-
-    <div>
       <button class="btn btn-outline-secondary"> 
         <i class="fab fa-html5"></i>  HTML
-
       </button>
-    </div>
-    <div>
       <button class="btn btn-outline-secondary" >
       <i class="fab fa-css3-alt"></i> CSS
       </button>
-    </div>
   </section>
-  <section>
-    <div class="add-fav"><i class="fas fa-plus"></i></div>
-  </section>
-</side-bar>
 
+</side-bar>
 <nav class="nav-bar">
-  <a href="auth/logout"><i class="fas fa-power-off"></i></a>
+  <p>WAT DA HACK</p>
+  <a href="../auth/login"><i class="fas fa-power-off buttonLogout"></i></a>
 </nav>
 
 

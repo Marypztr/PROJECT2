@@ -29,7 +29,7 @@ router.post("/createPost", (req, res, next) => {
     .then(newPost => {
       User.findByIdAndUpdate(req.user._id,{$push:{contributions:newPost}},{new:true})
       .then(()=>{
-        res.redirect("/userData")
+        res.redirect("/auth/profile")
       })
      .catch(err=> res.send(err))
     })
@@ -37,5 +37,11 @@ router.post("/createPost", (req, res, next) => {
       res.send(err))
 })
 
-
+router.get('/user/newPost/delete/:id', (req,res,next) => {
+  const { id } = req.params
+  console.log(id)
+  Contributions.findByIdAndDelete(id)
+  .then(() => res.redirect('/auth/profile'))
+    .catch(err => next(err))
+})
 module.exports = router

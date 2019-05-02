@@ -2,47 +2,35 @@
   <div class="pic">
     <img src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg" alt="" srcset="">
   </div>
-  <h2> {{loggedUser.name}}</h2>
+  <h2>WELCOME <br> {{loggedUser.name}}</h2>
   <div>
     <img src="{{photoURL}}">
   </div>
 
   </section>
-  <section class="favoritos">
-    <div>
-      <button>
+  <section id="botoncitos">
+      <button class="buttonFavoritos">
       <i class="fas fa-star">Favoritos</i>
       </button>
-    </div>
-
-    <div>
       <a href="/userData">
-        <button class="btn btn-outline-secondary">
+        <button class="btn btn-outline-secondary ">
           <i class="fab fa-js-square"></i> Javascript
         </button>
       </a>
-    </div>
-
-    <div>
       <button class="btn btn-outline-secondary"> 
         <i class="fab fa-html5"></i>  HTML
-
       </button>
-    </div>
-    <div>
       <button class="btn btn-outline-secondary" >
       <i class="fab fa-css3-alt"></i> CSS
       </button>
-    </div>
   </section>
-  <section>
-    <div class="add-fav"><i class="fas fa-plus"></i></div>
-  </section>
-</side-bar>
 
+</side-bar>
 <nav class="nav-bar">
-  <a href="auth/logout"><i class="fas fa-power-off"></i></a>
+  <p>WAT DA HACK</p>
+  <a href="../auth/login"><i class="fas fa-power-off buttonLogout"></i></a>
 </nav>
+
 
 <section class="profile-body">
 
@@ -56,9 +44,8 @@
       </a> 
 
   </div>
-  <div>
     <h2>MY CONTRIBUTIONS</h2>
-
+  <div class="my-contributions">
         <table class="table profile-table">
   <thead class="thead-dark">
     <tr>
@@ -73,12 +60,10 @@
       <th scope="row"> {{contribution.command}}</th>
       <td> {{contribution.description}}</td>
       </td>
-      <td><button>Delete</button></td>
+      <td><a href="/user/newPost/delete/{{contribution._id}}" type="button">Delete </a></td>
     </tr>
       {{/each}}
   </tbody>
 </table>
   </div>
 </section>
-<div class="buttonjs">
-</div>

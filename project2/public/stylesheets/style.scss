@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
 
 .main-container-box{
   margin:0px;
@@ -123,22 +123,23 @@ a p{
   height: 100%;
   width: 20%;
   position: fixed;
-  z-index:3;
+  z-index:2;
   top:0;
   left:0;
-  background-color: #29a3a3;
+  background-color:#30E3CA;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .nav-bar {
   height: 50px;
-  width: 80%;
+  width: 100%;
   position: fixed;
-  background-color: #80dfff;
+  background-color: #40514E;
   z-index:2;
   top:0;
   right: 0;
@@ -147,14 +148,23 @@ a p{
   align-items: center;
   justify-content: space-between;
   font-size: 35px;
-  color:rgb(56, 56, 56);
+  color:white;
 }
+
+.nav-bar p{
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  align-content: space-between;
+  margin-left: 30px;
+
+}
+
 
 .profile-body {
   height: 100%;
   width: 80%;
   position: fixed;
-  background-image: linear-gradient(to bottom right, #80dfff, #ccffff, #70db70);
+  background-image: linear-gradient(to bottom right, #97c4d3, #b9f0f0, #a9eca9);
   z-index:1;
   right: 0;
   bottom: 0;
@@ -174,12 +184,38 @@ a p{
   width: 180px;
 }
 
-.favoritos {
-  height: 60%;
+.buttonFavoritos {
+  width: 80%;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
+  background-color: #d2d200;
+  padding-inline-start: 20px;
+  margin-block-end: 20px;
+}
+#botoncitos{
+  display: flex;
+  height: 500px;
+  min-width: 300px;
+  font-size: 20px;
+  margin-top:-50px;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+
+#botoncitos button{
+  min-width: 200px;
+  display: flex;
+  display:inline-block;
+  margin-top: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-outline-secondary{
+font-size: 25px;
 }
 
 .add-fav {
@@ -193,6 +229,7 @@ a p{
   color: rgb(44, 44, 44);
   font-size: 20px;
 }
+
 
 .fav {
   width: 120%;
@@ -235,16 +272,16 @@ a p{
 .pic {
   width: 250px;
   height: 250px;
-  background-color:black;
   border-radius:50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin:50px;
+  padding-top: 40px;
 }
 .pic img {
-  width: 230px;
-  height: 230px;
+  width: 180px;
+  height: 174px;
   border-radius:50%;
 }
 
@@ -362,17 +399,39 @@ a p{
 }
 
 .buttonProfileBlue{
-  width: 200px !important;
-  height: 60px !important;
+  width: 300px !important;
+  height: 80px !important;
   font-size: 20px;
+  color:white;
+  background-color: #1e90ff;
   border-color: #1e90ff;
+  margin-bottom: 150px;
+
 
 }
 .buttonProfileGreen{
-  width: 200px !important;
-  height: 60px !important;
+  width: 300px !important;
+  height: 80px !important;
+  color:white;
   font-size: 20px;
+  background-color: #228b22;
   border-color: #228b22;
+  margin-bottom: 150px;
+
+}
+
+.my-contributions{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: -40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.my-contributions h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  padding:10px;
+
 }
 
 /* Mobile */
@@ -825,15 +884,15 @@ h3{
   line-height: 1.33;
 }
 
-.btn-circle {
-  width: 30px;
-  height: 30px;
-  padding: 6px 0px;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.42857;
-}
+// .btn-circle {
+//   width: 30px;
+//   height: 30px;
+//   padding: 6px 0px;
+//   border-radius: 15px;
+//   text-align: center;
+//   font-size: 12px;
+//   line-height: 1.42857;
+// }
 
 
 
