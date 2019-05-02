@@ -1,37 +1,30 @@
 <side-bar class="sideNav">
-  <section class="logo-container">
-    <img class="logo"
-      src="../images/logocolor.png"
-      alt="" srcset="">
+	  <div>
+    <img src="/images/logo2.png">
+  </div>
+  <h2>WELCOME <br> {{loggedUser.name}}</h2>
   </section>
-  <section class="favoritos">
-    <div class="fav fav-title">
-      <p>Favoritos</p>
-    </div>
-
-    <div class="fav" >
+  <section id="botoncitos">
+      <button class="buttonFavoritos">
+      <i class="fas fa-star">Favoritos</i>
+      </button>
       <a href="/userData">
-     <button class="buttonfav">
-       <i class="fab fa-js-square"></i> Javascript
-    </button> 
-    </a>
-    </div>
-    
-    <div class="fav">
-      <i class="fab fa-html5"></i> HTML
-    </div>
-    <div class="fav">
+        <button class="btn btn-outline-secondary ">
+          <i class="fab fa-js-square"></i> Javascript
+        </button>
+      </a>
+      <button class="btn btn-outline-secondary"> 
+        <i class="fab fa-html5"></i>  HTML
+      </button>
+      <button class="btn btn-outline-secondary" >
       <i class="fab fa-css3-alt"></i> CSS
-    </div>
+      </button>
   </section>
-  <section>
-    <div class="add-fav"><i class="fas fa-plus"></i></div>
-  </section>
-</side-bar>
 
+</side-bar>
 <nav class="nav-bar">
-  <i class="fas fa-arrow-circle-left return"></i>
-  <a class="createPost" href="/createPost">create new post</a>
+  <p>WAT DA HACK</p>
+  <a href="../auth/login"><i class="fas fa-power-off buttonLogout"></i></a>
 </nav>
 
 
