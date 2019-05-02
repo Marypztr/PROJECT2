@@ -33,10 +33,13 @@ router.get("/logout", (req, res, next) => {
     req.redirect("/login")
 })
 
-router.get("/profile", isLogged, (req, res, next) => res.render("auth/profile"))
+router.get("/profile", isLogged, (req, res, next) => {
+    User.findById(req.user._id).populate('contributions')
+        .then(user => res.render("auth/profile", user))
+        .catch(err =>console.log(err))
 
-router.get("/profile", isLogged,(req,res,next)=> res.render("admin/profile"))
-
+    
+}) 
 
 router.get("/editProfile/:id",(req,res,next)=>{
     let {id} = req.params

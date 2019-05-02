@@ -9,8 +9,12 @@ const userSchema = new mongoose.Schema({
     role: {
         type: String,
         enum: ["ADMIN", "USER"],
-        default: "USER"
-    }
+        default: "USER",
+    },
+    contributions:[{
+        type:Schema.Types.ObjectId,
+        ref:"Contributions"
+    }]
 }, {
         timestamps: true,
         versionkey: false
