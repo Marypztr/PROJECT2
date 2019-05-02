@@ -1,6 +1,6 @@
 <side-bar class="sideNav">
   <div class="pic">
-    <img src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg" alt="" srcset="">
+    <img src="../images/alberto.jpg" alt="" srcset="">
   </div>
   <h2>WELCOME <br> {{loggedUser.name}}</h2>
   <div>
@@ -10,7 +10,7 @@
   </section>
   <section id="botoncitos">
       <button class="buttonFavoritos">
-      <i class="fas fa-star">Favoritos</i>
+      <i class="fas fa-star">Favorites</i>
       </button>
       <a href="/userData">
         <button class="btn btn-outline-secondary ">
@@ -35,7 +35,7 @@
 <section class="profile-body">
 
   <div class="">
-      <a href="/editProfile/{{loggedUser._id}}">
+      <a href="/auth/editProfile/{{loggedUser._id}}">
       <button type="button" class="btn btn-outline-primary buttonProfileBlue">Edit Profile</button>
       </a>
 
