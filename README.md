@@ -8,5 +8,11 @@ Our second project is a glossary so easy to use, so everyone can upload commands
 
 ![](https://i.imgur.com/9MOB4Tk.png)
 
+---
 
+Authors 
+
+**Saúl** - [Github](https://github.com/saulscs)
+
+**Mary** - [Github](https://github.com/Marypztr)
 
